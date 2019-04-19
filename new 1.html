@@ -1,0 +1,180 @@
+<html>
+<head> <title> Hyerim Lim's Homepage </title></head>
+<body>
+	<img src="image.jpg" weight = "250" height = "250" align = "left">
+<font size = "6" color = "#3C5087" face = "Gill Sans MT"> Hyerim Lim </br></font>
+<font size = "4.5" color = "#3C5087" face = "Gill Sans MT">
+<br>Research Engineer, Mechanical Engineering Research Institute, KAIST, Daejeon, Republic of Korea</br>
+<br>Phone: (82)-10-6670-6754</br>
+<br>Email: hyerimlim@kaist.ac.kr<br></font>
+<br></br>
+<br></br>
+<hr size = "5" color = "#3C5087" width = "1000px" align = "left">
+<font size = "5" color = "#3C5087" face = "Gill Sans MT">
+
+<style>
+	.tabWrap { width: 1000px; height: 500px; }
+	.tab_Menu { margin: 0px; padding: 0px; list-style: none; }
+	.tabMenu { width: 200px; margin: 0px; text-align: center; 
+				padding-top: 10px; padding-bottom: 10px; float: left; }
+	.tabMenu a { color: #000000; font-weight: bold; text-decoration: none; }
+	.current { background-color: #E0ECF8; }
+	.tabPage { width: 900px; height: 470px; float: left; }
+</style>
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.12.0.min.js" ></script>
+	<script type="text/javascript">
+			function tabSetting() {
+				// 탭 컨텐츠 hide 후 현재 탭메뉴 페이지만 show
+				$('.tabPage').hide();
+				$($('.current').find('a').attr('href')).show();
+		 
+				// Tab 메뉴 클릭 이벤트 생성
+				$('li').click(function (event) {
+					var tagName = event.target.tagName; // 현재 선택된 태그네임
+					var selectedLiTag = (tagName.toString() == 'A') ? $(event.target).parent('li') : $(event.target); // A태그일 경우 상위 Li태그 선택, Li태그일 경우 그대로 태그 객체
+					var currentLiTag = $('li[class~=current]'); // 현재 current 클래그를 가진 탭
+					var isCurrent = false;  
+					 
+					// 현재 클릭된 탭이 current를 가졌는지 확인
+					isCurrent = $(selectedLiTag).hasClass('current');
+					 
+					// current를 가지지 않았을 경우만 실행
+					if (!isCurrent) {
+						$($(currentLiTag).find('a').attr('href')).hide();
+						$(currentLiTag).removeClass('current');
+		 
+						$(selectedLiTag).addClass('current');
+						$($(selectedLiTag).find('a').attr('href')).show();
+					}
+		 
+					return false;
+				});
+			}
+		 
+			$(function () {
+				// 탭 초기화 및 설정
+				tabSetting();
+			});
+		</script>
+		
+<div class="tabWrap">
+	<ul class="tab_Menu">
+	<font size = "5">
+		<li class="tabMenu current">
+			<a href="#tabContent01" >Research Intersts</a>
+		</li>
+		<li class="tabMenu">
+			<a href="#tabContent02" >Education</a>
+		</li>
+		<li class="tabMenu">
+			<a href="#tabContent04" >Publication</a>
+		</li>
+		<li class="tabMenu">
+			<a href="#tabContent05" >International Conference</a>
+		</li>
+		<li class="tabMenu">
+			<a href="#tabContent06" >Domestic Conference</a>
+		</li>
+		<li class="tabMenu">
+			<a href="#tabContent07" >Domestic Patent</a>
+		</li>
+		<li class="tabMenu">
+			<a href="#tabContent03" >Awards</a>
+		</li>
+		<li class="tabMenu">
+			<a href="#tabContent08" >International Experience</a>
+		</li>
+		<li class="tabMenu">
+			<a href="#tabContent09" >Teaching Experience</a>
+		</li>
+		<li class="tabMenu">
+			<a href="#tabContent10" >Skills</a>
+		</li>
+		</font>
+	</ul>
+	<br></br>
+	<br></br>
+	<br></br>
+	
+	<hr size = "5" color = "#3C5087">
+	<font size = "4.5" color = black>
+	<div class="tab_Content_Wrap">
+		<div id="tabContent01" class="tabPage">
+			<br>&bull; Dynamic walking: Although human walking is achieved by complicated control of multi-segmental & multi-actuated mechanism, the mechanics of the center of mass, the core of rigid body movement, appears to be a simple passive dynamics, which could be described by a response of mass-spring system. The passive dynamic walking approach, therefore, could serve as a theoretical framework to understand the mechanics of human walking. Due to the model simplicity, however, the current dynamic walking model explains only mechanics of center of mass. Thus, my research focuses on demonstrating 1) multi-joint movement of lower limb and 2) mechanics of bipedalism with spring mechanics and understanding mechanical dominance of human walking.</br>
+			<br>&bull; Wearable motion monitoring system: Recent advances in micro sensors made it possible to outdoor motion capture and even monitor daily activity over a longer period. A number of sensors for reliable data collection should be compromised with the cost of the manufacturing and maintenance. With the knowledge of human movement biomechanics, we proposed a model-based hybrid wearable motion monitoring system, which estimated un-measured kinetic and kinematic data from measured motion and biomechanics model. Based on the mechanical constraints of lower limb motions and center of mass motions from the model, the joint kinematics and kinetics could be estimated from center of mass motion. Developing a model-hybrid algorithm and wearable system with IMU are under research.</br></div>
+		</div>
+		<div id="tabContent02" class="tabPage">
+			<br>&bull; Ph.D., Mechanical Engineering, KAIST (Feb, 2018)</br>
+			<br>Dissertation &quot;Investigation of mechanical dominance of human walking through the dynamic analysis of lower limbs motions&quot;</br>
+			<br>Advisor: Prof. Sukyung Park</br>
+			<br>&bull; M.S., Mechanical Engineering, KAIST (Feb, 2013)</br>
+			<br>Thesis &quot;The internal model of visually induced roll tilt motion perception&quot;</br>
+			<br>Advisor: Prof.  Sukyung Park</br>
+			<br>&bull; B.S., Mechanical Engineering, KAIST (Feb, 2011)</br>
+		</div>
+		<div id="tabContent03" class="tabPage">
+			<br>&bull; GCORE Project for postdoc. Developing a smartphone healthcare system through the combination of dynamic walking model and machine learning. $ 114,000. 2018.09~2020.02 </br>
+			<br>&bull; Best Paper Award, the 10th annual meeting of the Bioengineering division at Korea Society of Mechanical Engineering, Daegu (2018)</br>
+			<br>&bull; Best Oral Presentation Award, the 7st International Biomedical Engineering Conference, Gyeongju (2015)</br>
+			<br>&bull; Cum laude Master&apos;s Degree Student in Mechanical engineering department of KAIST (2013)</br>
+			<br>&bull; Best Poster Presentation Silver Award, the 4th Annual meeting of the Korean Society of Biomechanics Conference, Daejeon, Korea (2012)</br>
+			<br>&bull; Best Paper Award, the 4th annual meeting of the Bioengineering division at Korea Society of Mechanical Engineering, Gwangju (2012)</br>
+			<br>&bull; Scholarship awardee of Woodeok-Yundeokbyeong Foundation (2012)</br>
+		</div>
+		<div id="tabContent04" class="tabPage">
+			<br>&bull; Hyerim Lim, C. David Remy and Sukyung Park, A bipedal spring walking model emulates the dynamics of stance and swing leg (in preparation)</br>
+			<br>&bull; Hyerim Lim and Sukyung Park, Motion estimation of lower limb during walking form a single motion measurement based on SLIP characteristics (in preparation)</br>
+			<br>&bull; Hyerim Lim and Sukyung Park, Formulation of joint torques of lower limbs during walking that shares its CoM dynamics with spring mechanics (in preparation)</br>
+			<br>&bull; Hyerim Lim and Sukyung Park, Kinematics of lower limbs during walking are emulated by springy walking model with a compliantly connected, off-centered curvy foot, Journal of Biomechanics, Vol. 71, pp. 119-126, 2018, IF 2.431</br>
+			<br>&bull; Hyerim Lim, Heewon Park and Sukyung Park, Compliant walking model with a curvy foot reflection the position of ankle on reproducing the ankle torque profile, Journal of Mechanical Science and Technology, Vol. 29(6), pp. 2307-2311, 2015 IF 1.194</br>
+			<br>&bull; Hyerim Lim and Sukyung Park, Effect of Vision Coherent Sensory Cue on Roll Tilt Perception and Sensory Weighting, Journal of the Korean Society of Mechanical Engineering B, Vol.36(11), pp. 1091-1097, 2012</br>
+		</div>
+		<div id="tabContent05" class="tabPage">
+			<br>&bull; Hyerim Lim, Myeong Sub Kim, Hyunho Jeon and Sukyung Park, Motion estimation of lower limb during walking from a single measurement based on SLIP characteristics, Dynamic Walking, USA, 2018 <a href="https://www.youtube.com/watch?v=7UCg7iVpMM0">(https://www.youtube.com/watch?v=7UCg7iVpMM0)</a></br>
+			<br>&bull; Hyerim Lim and Sukyung Park, Mechanical dominance of human walking through the dynamic analysis of lower limbs motions, Dynamic Walking, USA, 2018 <a href="https://www.youtube.com/watch?v=SwaJ6VIQESU">(https://www.youtube.com/watch?v=SwaJ6VIQESU)</a></br>
+			<br>&bull; Hyerim Lim and Sukyung Park, Estimation of unmeasured lower limb kinematics based on oscillatory CoM dynamics, Dynamic Walking, USA, 2016</br>
+			<br>&bull; Hyerim Lim and Sukyung Park, Time-varying nonlinearity determined by CoM motion can explain the relationship between joint angle and joint torque, the 9th International Symposium on Nature-inspired Technology, Korea, 2016</br>
+			<br>&bull; Hyerim Lim and Sukyung Park, The feedback/forward controller of joint could achieve the center of mass motion during running with gains determined by natural frequency, the 7th International Biomedical Engineering Conference, Korea, 2015</br>
+			<br>&bull; Hyerim Lim and Sukyung Park, Time-varying non-linear feedback gain of the joints of stance leg based on the compliant legged walking model, the 8th Asian Pacific Conference on Biomechanics, Japan, 2015</br>
+			<br>&bull; Hyerim Lim and Sukyung Park, Compliant legged behavior of walking could be achieved by feedback control that shares springy oscillatory characteristics, Dynamic Walking, USA, 2015</br>
+			<br>&bull; Hyerim Lim and Sukyung Park, Adjusted joint position of the compliant walking model with curvy feet could reproduce the ankle torque profile, Dynamic Walking, Switzerland, 2014</br>
+			<br>&bull; Hyerim Lim, Sukyung Park, Roll tilt perception in sensory conflict condition can be explained by the internal model with high weight on vision, the 7th Asian Pacific Conference on Biomechanics, Korea, 2013</br>
+			<br>&bull; Hyerim Lim, Sukyung Park, Dominant effect of visual motion cues on the motion perception under sensory conflict condition is represented by high sensory weight in internal model, the 2nd Joint World Congress of International Society for Posture & Gait Research/Gait & Mental Function, Japan, 2013</br>
+			<br>&bull; Hyerim Lim, Sukyung Park, Study about the Reliability of Sensors in Motion Perception Using Kalman Filter, the 7th International Symposium on Nature-inspired Technology, Korea, 2013</br>
+			<br>&bull; Hyerim Lim, Heewon Park, Sukyung Park, Sensory Reweighting for Visually Induced Roll Tilt Perception Under Sensory Conflict Conditions, the 36th annual meeting of the American society of Biomechanics, USA, 2012</br>
+			<br>&bull; Hyerim Lim, Sukyung Park, Influence of additional sensory information, plantar tactile information, on roll tilt perception, the 1st Joint World Congress of International Society for Posture & Gait Research /Gait and Mental Function, Norway, 2012</br>
+			<br>&bull; Hyerim Lim, Sukyung Park, Influence of plantar tactile stimulus on roll tilt perception, the 6th International Symposium on Nature-Inspired Technology, Korea, 2012</br>
+		</div>
+		<div id="tabContent06" class="tabPage">
+			<br>&bull; Myeong Sub Kim, Hyerim Lim and Sukyung Park, Estimation of Multi-Joint Motion Using a Single IMU Sensor based on Dynamic Characteristics during Walking, the 10th annual meeting of the Bioengineering division at Korea Society of Mechanical Engineering, Daegu, 2018 </br>
+			<br>&bull; Hyerim Lim and Sukyung Park, Compliant walking model can reproduce foot trajectory of full gait cycle, 2017 Korea Society of Mechanical Engineering, Jeju, 2017</br>
+			<br>&bull; Hyerim Lim and Sukyung Park, A springy bipedal walking model that demonstrates the kinetics of full gait cycle, the 9th annual meeting of the Bioengineering division at Korea Society of Mechanical Engineering, Daejeon, 2017</br>
+			<br>&bull; Hyerim Lim and Sukyung Park, Speed-proportional feedback gain of the multilink rigid body system could emulate GRF of human walking, the 8th annual meeting of the Bioengineering division at Korea Society of Mechanical Engineering, Chuncheon, 2016</br>
+			<br>&bull; Hyerim Lim and Sukyung Park, Feedback gain property of the stance leg joints based on the compliant walking model, the 7th annual meeting of the Bioengineering division at Korea Society of Mechanical Engineering, Busan, 2015</br>
+			<br>&bull; Hyerim Lim and Sukyung Park, The constraint torque of the compliant walking model with curved foot could represent the ankle torque qualitatively, the 6th annual meeting of the Bioengineering division at Korea Society of Mechanical Engineering, Gyeongju, 2014</br>
+			<br>&bull; Hyerim Lim and Sukyung Park, Study about weight of sensory information using kalman filter, the 4th Korea society of biomechanics conference, Daejeon, 2012</br>
+			<br>&bull; Hyerim Lim and Sukyung Park, Additional sensory information changes roll tilt perception, the 4th annual meeting of the Bioengineering division at Korea Society of Mechanical Engineering, Gwangju, 2012</br>
+		</div>
+		<div id="tabContent07" class="tabPage">
+			<br>&bull; Hyerim Lim, Hansol Ryu and Sukyung Park, Device of estimating human motion kinetics information and method of estimating human motion kinetics information, August 7, 2017</br>
+		</div>
+		<div id="tabContent08" class="tabPage">
+			<br>&bull; Visiting Student at Robotics Laboratory, NAVER LABS, Republic of Korea, January 2, 2018 - February 22, 2018</br>
+			<br>&bull; Visiting Student at Robotics and Motion Laboratory (co-worked with Prof. C. David Remy), Department of Mechanical Engineering, University of Michigan, US, October 15, 2016 - February 28, 2017</br>
+			<br>&bull; Exchange Research Student at PRISME laboratory (co-worked with Prof. Nacim Ramdani), Department of Control Systems Engineering, the University of Orleans and IUT de Bourges, France, June 3, 2012 - July 14, 2012</br>
+		</div>
+		<div id="tabContent09" class="tabPage">
+			<br>&bull; Developed teaching materials for mechanical engineering Capstone Design lecture that includes mechanism design, motor control, image processing and system integration using programs that SolidWorks, Labview, ROS and OpenCV with C++. </br>
+		</div>
+		<div id="tabContent10" class="tabPage">
+			<br>&bull; Software tool: SolidWorks, Labview, Matlab, Photoshop, Illustrator, Microsoft Offices</br>
+			<br>&bull; Programming/OS: Java, Phython, C++/Windows, Linux</br>
+			<br>&bull; Language: Korean, English</br>
+		</div>
+		</font>
+	</div>
+</div>
+
+</body>
+</html>
